@@ -1,0 +1,3 @@
+module.exports=[50645,a=>{a.n(a.i(27572))},43619,a=>{a.n(a.i(79962))},13718,a=>{a.n(a.i(85523))},18198,a=>{a.n(a.i(45518))},60168,a=>{"use strict";var b=a.i(7997);function c(){return(0,b.jsxs)("div",{className:"text-center py-10",children:[(0,b.jsx)("h1",{className:"text-4xl font-bold text-gray-900 mb-4",children:"Welcome to Lore"}),(0,b.jsx)("p",{className:"text-lg text-gray-600",children:"Family and community archiving made effortless."})]})}a.s(["default",()=>c])}];
+
+//# sourceMappingURL=_a11b82c4._.js.map
