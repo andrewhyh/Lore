@@ -1,162 +1,150 @@
-🧭 Product Requirements Document (PRD) — Lore
-1. Overview
+# 🌿 Lore
 
-Product Name: Lore
-Type: Web Application (self-hosted, cloud-integrated)
-Stage: MVP / Prototype
-Tech Stack (proposed):
+**Lore** is a modern web application that makes family and community archiving effortless and meaningful.  
+It combines visual storytelling, cloud storage, and social connection into one seamless platform.
 
-Backend: Supabase (Auth, Database, Storage, Realtime)
+---
 
-Frontend: React (Next.js or Remix)
+## 🧭 Overview
 
-UI: TailwindCSS / Shadcn UI (modern minimal aesthetic)
+**Type:** Web Application (self-hosted, cloud-integrated)  
+**Stage:** MVP / Prototype  
+**Stack:**  
+- **Backend:** [Supabase](https://supabase.com) (Auth, Database, Storage, Realtime)  
+- **Frontend:** React (Next.js or Remix)  
+- **UI:** TailwindCSS + Shadcn UI  
+- **Deployment:** [Coolify](https://coolify.io) (self-hosted)  
+- **Integrations:** Supabase Cloud Storage, optional social login
 
-Deployment: Coolify (self-hosted)
+---
 
-Integrations: Supabase Cloud Storage, optional social login
+## 🎯 Vision
 
-2. Vision & Purpose
+> To make family and community archiving effortless, meaningful, and beautifully visual — empowering people to document, share, and preserve their stories for generations.
 
-Vision:
-To make family and community archiving effortless, meaningful, and beautifully visual — empowering people to document, share, and preserve their stories for generations.
+### Core Purpose
+Lore combines **visual storytelling**, **cloud storage**, and **social connection** into one unified archive platform.  
+It eliminates the need for fragmented tools (social media for sharing, Google Drive for storage, genealogy apps for trees).
 
-Core Purpose:
-Lore combines visual storytelling, cloud storage, and social connection into one seamless experience. It eliminates the fragmentation of existing tools (social media for sharing, Google Drive for storage, genealogy apps for family trees) by merging them into one unified archive platform.
+---
 
-3. Problem Statement
+## 💡 Problem Statement
 
-People want to preserve their family or community histories but face challenges:
+People want to preserve family or community histories but face challenges:
+- Fragmented tools and platforms
+- Limited accessibility of traditional genealogy tools
+- Lack of engagement or emotional connection
 
-Fragmented Tools: Photos, videos, and memories are spread across multiple platforms.
+### Opportunity
+Lore simplifies digital preservation through an intuitive, connected experience merging **archiving**, **social networking**, and **memory sharing**.
 
-Low Accessibility: Traditional genealogy tools are clunky and data-heavy.
+---
 
-Lack of Engagement: Most archival tools don’t encourage daily interaction or community storytelling.
+## 🧍‍♀️ Target Users
 
-Opportunity:
-Lore simplifies digital preservation through an intuitive, connected platform — merging archiving, social networking, and memory sharing.
+**Primary Personas**
+1. **Family Archivists:** Individuals documenting family history or ancestry  
+2. **Community Leaders:** Organizers or cultural groups preserving collective memories  
+3. **Casual Users:** People sharing life updates and personal timelines
 
-4. Goals & Success Metrics
-Goal	Success Metric
-Simplify family/community archiving	80% of users successfully create a family tree and upload media within first week
-Encourage daily engagement	40% of users perform daily check-ins or timeline updates
-Enable seamless sharing and connection	50% of users belong to at least one community or shared group
-Provide reliable, scalable hosting	99% uptime via Coolify + Supabase integration
-5. Target Users & Personas
+**User Needs**
+- Easy photo/video uploading  
+- Visual family trees & timelines  
+- Secure cloud storage  
+- Collaborative communities
 
-Primary Users:
+---
 
-Family Archivists: Individuals documenting family history or ancestry.
+## ✨ Core Features (MVP)
 
-Community Leaders: Organizers or cultural groups preserving collective memories.
+### 1. Personal Profiles
+- Display name, bio, avatar  
+- View uploads & posts  
+- Privacy settings (public/private/family-only)
 
-Casual Users: People who simply want to share personal timelines or life events with close circles.
+### 2. Visual Family Tree
+- Interactive drag-and-drop layout  
+- Add members, relationships, photos, and info  
+- Link members to shared memories and timelines
 
-User Needs:
+### 3. Timeline View
+- Chronological feed of milestones and media  
+- Filter by tags, people, or events  
+- Shared group timelines
 
-Easy uploading and tagging of photos/videos
+### 4. Community Spaces
+- Create or join communities (e.g., “Huynh Family”)  
+- Members can post updates & media  
+- Commenting and reacting
 
-Visual, navigable timelines and family trees
+### 5. Cloud Storage
+- Supabase-backed media storage  
+- Organized by tags, albums, or dates  
+- Supports images, videos, and documents
 
-Secure cloud storage with ownership controls
+### 6. Daily Check-In Feed
+- Dashboard of community updates  
+- Quick “Add Memory” or “Share Photo” actions  
 
-Ability to connect or collaborate with others on shared archives
+---
 
-6. Core Features
-MVP Must-Have Features
+## 🚀 Future Features (Phase 2+)
 
-Personal Profile:
+- AI-powered memory recaps (highlight reels, story summaries)  
+- Granular privacy and sharing controls  
+- In-app messaging or chat  
+- Exportable archives (PDF/JSON)  
+- Custom domain hosting options  
 
-Display name, bio, and profile image
+---
 
-View personal media uploads and posts
+## 🎨 UX & Design Principles
 
-Privacy settings (public/private/family-only)
+- **Aesthetic:** Warm, nostalgic, human-centered  
+- **Layout:** Visual-first; intuitive drag/drop  
+- **Accessibility:** WCAG-compliant  
+- **Emotion:** Designed to evoke connection & memory  
 
-Visual Family Tree:
+---
 
-Interactive tree layout (drag-and-drop or auto-arranged)
+## ⚙️ Technical Requirements
 
-Ability to add members, relationships, and basic info (DOB, description, photos)
+| Category | Requirement |
+|-----------|--------------|
+| Backend | Supabase (Postgres DB, Auth, Storage) |
+| Frontend | React + TailwindCSS |
+| Hosting | Coolify self-hosted |
+| Storage | Supabase buckets w/ RBAC |
+| Authentication | Supabase Auth (email/social) |
+| Scalability | Modular architecture |
+| Backup | Daily DB + storage snapshots |
 
-Link members to timelines and shared memories
+---
 
-Timeline View:
+## 🗓️ MVP Roadmap
 
-Chronological feed of posts, media, and milestones
+| Phase | Description | Deliverable |
+|--------|--------------|--------------|
+| **1. Core Architecture** | Set up Supabase + schema + storage buckets | Working backend |
+| **2. Auth & Profiles** | Implement Supabase Auth and profiles | Basic user system |
+| **3. Timeline & Uploads** | Enable media uploads and timeline | Interactive feed |
+| **4. Family Tree View** | Build visual relationship map | Dynamic family tree |
+| **5. Communities** | Add group pages, posts, and memberships | Connected platform |
+| **6. UI Polish & Deploy** | Final design + Coolify deployment | Live MVP |
 
-Filtering by tags, event types, or people
+---
 
-Shared group timelines for communities/families
+## ⚠️ Risks & Assumptions
 
-Community Spaces:
+- Large storage requirements → need scalable quota model  
+- Family tree visualization may require optimization  
+- Self-hosted setup assumes technical proficiency with Coolify  
 
-Join or create communities (e.g., “Huynh Family,” “Vietnamese Heritage Group”)
+---
 
-Members can post updates, media, and shared milestones
+## 🌍 Future Vision
 
-Commenting and reacting
+Lore will evolve into a **decentralized heritage network** — connecting families, communities, and cultures worldwide.  
+Users will be able to trace stories, collaborate on archives, and even generate digital oral histories using AI from old media.
 
-Cloud Storage:
-
-Backed by Supabase Storage
-
-Organized by date, tags, or albums
-
-Supports image, video, and document uploads
-
-Daily Check-In Feed:
-
-Dashboard showing updates from communities and followed members
-
-Quick post option (“Add a Memory,” “Share a Photo”)
-
-7. Optional / Phase 2 Features
-
-AI-powered “Memory Recap” (auto-generate highlight reels or story summaries)
-
-Advanced privacy settings (granular sharing control per post/tree branch)
-
-In-app chat or messaging
-
-Custom domain or exportable archives (PDF/JSON)
-
-8. UX / Design Principles
-
-Aesthetic: Warm, human-centered design — soft tones, minimalist UI.
-
-Interaction: Visual-first, intuitive drag/drop and scrolling experiences.
-
-Accessibility: WCAG-compliant design, large touch targets, readable fonts.
-
-Emotion-driven UX: Focus on memory, connection, and storytelling.
-
-9. Technical Requirements
-Category	Requirement
-Backend	Supabase (Postgres DB, Auth, Storage)
-Hosting	Coolify self-hosted server
-Frontend	React with TailwindCSS and component library
-Storage	Supabase buckets with role-based access
-Authentication	Supabase Auth (email + social login)
-Scalability	Modular microservice-friendly setup
-Backup	Daily database + storage backups
-10. Launch Plan (MVP Roadmap)
-Phase	Description	Deliverable
-Phase 1 – Core Architecture	Set up Supabase project, DB schema, and storage buckets	Working backend
-Phase 2 – User Profiles & Auth	Implement Supabase Auth, profile creation, and storage	Basic user system
-Phase 3 – Timeline & Media Uploads	Enable posting and media uploads	Functional timeline
-Phase 4 – Family Tree View	Develop interactive visualization	Dynamic family tree
-Phase 5 – Community Spaces	Add group pages, posts, and membership	Connected experience
-Phase 6 – UI Polish & Deployment	Finalize UI/UX, deploy via Coolify	Live MVP
-11. Risks & Assumptions
-
-Users may require large storage capacities (need flexible quota model).
-
-Visualization of family trees can be complex (performance optimization needed).
-
-Self-hosting on Coolify assumes stable infrastructure and admin expertise.
-
-12. Future Vision
-
-Lore could evolve into a decentralized heritage network — connecting family lines and communities globally, allowing users to trace stories, collaborate on cultural archives, and even integrate AI-generated oral histories from old photos or documents.
+---
