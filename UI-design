@@ -1,0 +1,193 @@
+🌿 Lore Web UI Design Specification
+🎨 Design Philosophy
+
+“Nostalgia meets modernity.”
+Lore’s design should feel personal and timeless — like flipping through an old photo album in a sleek digital space. Think Ancestry.com’s structured layout + Wikipedia’s organized content presentation + Notion’s modern simplicity + Instagram’s emotional visuality.
+
+🧭 Core UX Goals
+
+Ease of Discovery:
+Users should easily find stories, people, and events through visual navigation (tree view, timelines, or community pages).
+
+Storytelling First:
+Every UI element should highlight narrative — photos, videos, and written memories.
+
+Personal & Social Balance:
+The design should support both private reflection and public sharing within communities.
+
+Seamless Transitions:
+Moving from a person’s story → their family → their timeline → their community should feel natural and visually consistent.
+
+🧩 Page / Component Breakdown
+1. Home (Feed + Dashboard)
+
+Purpose: Entry point for discovering updates and engaging with others.
+Inspiration: Facebook News Feed + Ancestry’s Activity Hub + Medium’s storytelling cards.
+
+Elements:
+
+Header: “Welcome back, [Name]”
+
+Quick Actions:
+
+➕ Add a Memory
+
+📸 Upload Photo/Video
+
+✍️ Write a Story
+
+Feed:
+
+Cards with story previews (cover image + short excerpt)
+
+Activity highlights from family or communities
+
+Daily “This Day in History” memories
+
+2. Timeline View
+
+Purpose: Visualize life stories or community history.
+Inspiration: Apple Photos “Moments” + vertical scroll storytelling.
+
+Elements:
+
+Horizontal/Vertical scrollable timeline
+
+Story blocks (expand on click)
+
+Embedded media: images, short videos, voice notes
+
+Tag filters: Family, Friends, Travel, Milestones
+
+💡 Optional: allow collaborative timeline editing (e.g., siblings adding events to the same timeline).
+
+3. Family / Community Tree
+
+Purpose: Visual relationship map with stories linked to people.
+Inspiration: Ancestry.com tree + Notion database relations.
+
+Elements:
+
+Interactive graph layout (zoom, pan, drag)
+
+Profile cards (photo, name, DOB/DOD, short bio)
+
+Click-through to view profile or associated stories
+
+Option to add connections or relationships
+
+“Legacy Mode” filter for historical visualization
+
+4. Story Page (Core Experience)
+
+Purpose: The heart of Lore — the individual story page.
+Inspiration: Wikipedia article layout + Medium blog post.
+
+Layout:
+
+Hero Image/Video — sets emotional tone
+
+Title + Date + Location
+
+Rich Text Body — markdown or block editor style
+
+Attached Media Gallery (carousel or grid)
+
+Contributors Section (people linked to story)
+
+Comments & Reactions (for shared stories)
+
+Design Vibe: clean, book-like readability (white/cream background, serif headings, sans-serif body).
+
+5. Profile Page
+
+Purpose: Personal hub of stories, timeline, and family connections.
+Sections:
+
+Banner photo + avatar
+
+Bio + location + tags
+
+Tabs:
+
+🕰 Timeline
+
+📚 Stories
+
+👨‍👩‍👧 Family Tree
+
+🗂 Media Gallery
+
+6. Community Hub
+
+Purpose: Shared spaces for cultural groups, families, or organizations.
+Elements:
+
+Group banner and description
+
+Timeline of collective events
+
+Shared photo albums
+
+Discussion threads or “memory walls”
+
+🖌️ Visual Design System
+Element	Style
+Colors	Warm Neutrals + Soft Greens (#F7F5F2, #D1C7B7, #3A5F4D, #B08968)
+Typography	Headings: Playfair Display (serif); Body: Inter or Lato
+UI Components	Rounded corners (xl+), soft shadows, depth layering
+Imagery	Polaroid-style photo cards, clean borders, minimal overlays
+Icons	Lucide or Heroicons (simple, clean lines)
+Animations	Framer Motion for smooth transitions (fade, slide, scale)
+⚙️ Technical Frontend Plan
+
+Framework: Next.js (React-based, SSR)
+Styling: TailwindCSS + Shadcn UI
+Animations: Framer Motion
+Storage: Supabase (for media, DB, and auth)
+Deployment: Coolify self-hosted
+
+Component Structure Example:
+
+/components
+  /layout
+  /story
+  /timeline
+  /tree
+  /community
+  /profile
+/pages
+  index.tsx
+  story/[id].tsx
+  profile/[id].tsx
+  community/[id].tsx
+  timeline.tsx
+
+🧠 Experience Example (User Flow)
+
+User logs in → sees “Daily Memory Feed”
+
+Clicks “Add a Story” → uploads photo, adds caption + date
+
+System auto-suggests linking to people in family tree
+
+Story appears in personal timeline + related profiles
+
+Other members can view, comment, and add related media
+
+📱 Responsive Layout Goals
+Device	Layout Focus
+Mobile	Timeline-first, swipe navigation
+Tablet	Story-centered, easy editing
+Desktop	Full-featured dashboard (split-view between stories & family tree)
+🌍 Design Inspiration Board
+
+You can base the wireframes on:
+
+Ancestry.com (relationship mapping)
+
+Wikipedia (structured storytelling)
+
+Notion / Medium (modern content layout)
+
+Pinterest / Apple Photos (visual gallery mood)
