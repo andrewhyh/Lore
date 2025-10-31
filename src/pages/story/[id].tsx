@@ -1,13 +1,4 @@
-import { useRouter } from 'next/router'
+// pages router story dynamic route disabled to avoid App/Pages conflict. See src/pages_backup/story/[id].tsx for the original.
 
-export default function StoryPage() {
-  const router = useRouter()
-  const { id } = router.query
+export const pagesStoryDisabled = true
 
-  return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-2xl font-bold mb-2">Story {id}</h1>
-      <p className="text-gray-600">Story page scaffolded from UI design.</p>
-    </div>
-  )
-}
