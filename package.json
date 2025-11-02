@@ -1,41 +1,22 @@
 {
   "name": "lore",
-  "version": "1.0.0",
-  "description": "**Lore** is a modern web application that makes family and community archiving effortless and meaningful.   It combines visual storytelling, cloud storage, and social connection into one seamless platform.",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrewhyh/Lore.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/andrewhyh/Lore/issues"
-  },
-  "homepage": "https://github.com/andrewhyh/Lore#readme",
   "dependencies": {
-    "@supabase/ssr": "^0.7.0",
-    "@supabase/supabase-js": "^2.77.0",
-    "@tailwindcss/postcss": "^4.1.16",
-    "next": "^16.0.1",
+    "@google/genai": "^1.28.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@types/node": "^24.9.2",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.38.0",
-    "eslint-config-next": "^16.0.1",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.16",
-    "typescript": "^5.9.3"
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
   }
 }

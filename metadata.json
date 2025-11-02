@@ -1,0 +1,5 @@
+{
+  "name": "Lore",
+  "description": "A landing page for Lore, an AI-powered platform to preserve memories, visualize relationships, and connect communities. Features interactive demos using the Gemini API for image analysis and a helpful chatbot.",
+  "requestFramePermissions": []
+}
