@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Frontend:
+- Next.js 14+ (Web application, mobile-responsive)
+- Progressive Web App (PWA) for mobile
+- React Flow (family tree visualization)
+- Framer Motion (timeline animations)
+- TailwindCSS (styling)
 
-# Run and deploy your AI Studio app
+Backend:
+- Next.js API Routes
+- Supabase (BaaS platform)
+  - PostgreSQL database
+  - Supabase Auth (authentication)
+  - Supabase Storage (file storage)
+  - Supabase Realtime (live updates)
+  - Supabase Edge Functions (webhooks)
 
-This contains everything you need to run your app locally.
+AI Services:
+- Google Gemini 1.5 Flash (conversational AI)
+- Google Gemini Vision (image analysis, facial recognition)
 
-View your app in AI Studio: https://ai.studio/apps/drive/16iQeDwrkoZ2tpew_uq179UWtyu0vqv0T
+Payments:
+- Stripe (subscriptions, customer portal)
 
-## Run Locally
+Hosting:
+- Coolify (self-hosted deployment platform)
+- Hetzner Cloud VPS or DigitalOcean
 
-**Prerequisites:**  Node.js
+Additional Tools:
+- BullMQ + Redis (background job processing)
+- Sharp (server-side image processing)
+- pgvector (PostgreSQL extension for AI embeddings)
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Product Overview:
+
+Problem Statement:
+
+   Families and communities lack an easy, centralized platform to preserve their history, connect members, and archive memories across generations. Existing solutions either focus solely on genealogy or are too complex for everyday users.
+
+Target Users:
+
+   Primary: Families wanting to document their history and share memories
+   Secondary: Communities (churches, sports teams, schools, friend groups)
+   Tertiary: Individuals creating personal life archives
+
+Key Differentiators
+
+   Visual family trees for ANY community (not just genetic relatives)
+   AI assistant that proactively suggests archiving actions
+   Combined timeline + tree + storage in one platform
+   Social feed showing community activity
+   Accessible, intuitive design for all ages
