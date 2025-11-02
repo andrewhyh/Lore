@@ -1,6 +1,10 @@
 import React from 'react';
 
-const CTA: React.FC = () => {
+interface CTAProps {
+  onShowAuth?: () => void;
+}
+
+const CTA: React.FC<CTAProps> = ({ onShowAuth }) => {
   return (
     <section id="cta">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -11,12 +15,12 @@ const CTA: React.FC = () => {
           <p className="max-w-2xl mx-auto text-lg text-slate-300 mb-8">
             Join thousands of others in preserving what matters most. Create your free archive today and invite your community to contribute.
           </p>
-          <a
-            href="#"
+          <button
+            onClick={onShowAuth}
             className="inline-block bg-emerald-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-600 transition-transform transform hover:scale-105 shadow-lg"
           >
-            Request Beta
-          </a>
+            Sign Up Now
+          </button>
         </div>
       </div>
     </section>

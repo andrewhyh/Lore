@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { supabase } from '../services/supabase';
+import { Session } from '@supabase/supabase-js';
 
 const DinosaurLogoIcon = () => (
     <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="text-emerald-500 fill-current">
@@ -16,14 +18,22 @@ const DinosaurLogoIcon = () => (
     </svg>
 );
 
+interface HeaderProps {
+  session: Session | null;
+  onShowAuth?: () => void;
+}
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({ session, onShowAuth }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
         { name: 'Features', href: '#features' },
         { name: 'Testimonials', href: '#testimonials' },
     ];
+
+    const handleLogout = async () => {
+      await supabase.auth.signOut();
+    };
 
   return (
     <header className="bg-slate-900/80 backdrop-blur-lg sticky top-0 z-40 w-full border-b border-slate-700">
@@ -41,9 +51,21 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className="flex items-center gap-4">
-             <a href="#cta" className="hidden md:inline-block bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-600 transition-colors shadow-sm">
-                Request Beta
-            </a>
+            {session ? (
+              <button
+                onClick={handleLogout}
+                className="hidden md:inline-block bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-600 transition-colors shadow-sm"
+              >
+                Logout
+              </button>
+            ) : (
+              <button
+                onClick={onShowAuth}
+                className="hidden md:inline-block bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-600 transition-colors shadow-sm"
+              >
+                Sign Up Now
+              </button>
+            )}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800"
@@ -62,9 +84,21 @@ const Header: React.FC = () => {
                         {link.name}
                     </a>
                 ))}
-                <a href="#cta" onClick={() => setIsMenuOpen(false)} className="bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-600 transition-colors shadow-sm text-center">
-                    Request Beta
-                </a>
+                {session ? (
+                  <button
+                    onClick={handleLogout}
+                    className="bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-600 transition-colors shadow-sm text-center"
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <button
+                    onClick={onShowAuth}
+                    className="bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-emerald-600 transition-colors shadow-sm text-center"
+                  >
+                    Sign Up Now
+                  </button>
+                )}
                 </nav>
             </div>
         )}
