@@ -8,11 +8,11 @@ interface ProfileProps {
 
 const Profile: React.FC<ProfileProps> = ({ session }) => {
   const [loading, setLoading] = useState(true);
+  const [uploading, setUploading] = useState(false);
   const [fullName, setFullName] = useState('');
   const [displayName, setDisplayName] = useState('');
   const [bio, setBio] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
-  const [avatarFile, setAvatarFile] = useState<File | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -58,14 +58,14 @@ const Profile: React.FC<ProfileProps> = ({ session }) => {
     const fileName = `${session.user.id}-${Math.random()}.${fileExt}`;
     const filePath = `${fileName}`;
 
-    setLoading(true);
+    setUploading(true);
     const { error: uploadError } = await supabase.storage
       .from('avatars')
       .upload(filePath, file);
 
     if (uploadError) {
       alert(uploadError.message);
-      setLoading(false);
+      setUploading(false);
       return;
     }
 
@@ -73,7 +73,7 @@ const Profile: React.FC<ProfileProps> = ({ session }) => {
     if (publicUrlData) {
       setAvatarUrl(publicUrlData.publicUrl);
     }
-    setLoading(false);
+    setUploading(false);
   };
 
   async function updateProfile(event: React.FormEvent<HTMLFormElement>) {
@@ -87,7 +87,7 @@ const Profile: React.FC<ProfileProps> = ({ session }) => {
       full_name: fullName,
       display_name: displayName,
       bio,
-      avatar_url: avatarUrl, // Include avatar_url in updates
+      avatar_url: avatarUrl,
       updated_at: new Date(),
     };
 
@@ -99,6 +99,14 @@ const Profile: React.FC<ProfileProps> = ({ session }) => {
       alert('Profile updated successfully!');
     }
     setLoading(false);
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500"></div>
+      </div>
+    );
   }
 
   return (
@@ -115,14 +123,14 @@ const Profile: React.FC<ProfileProps> = ({ session }) => {
               </div>
             )}
             <label htmlFor="avatar" className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded-lg">
-              Upload Avatar
+              {uploading ? 'Uploading...' : 'Upload Avatar'}
             </label>
             <input
               type="file"
               id="avatar"
               accept="image/*"
               onChange={handleAvatarUpload}
-              disabled={loading}
+              disabled={uploading}
               className="hidden"
             />
           </div>
@@ -164,7 +172,7 @@ const Profile: React.FC<ProfileProps> = ({ session }) => {
             <button
               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed"
               type="submit"
-              disabled={loading}
+              disabled={loading || uploading}
             >
               {loading ? 'Loading ...' : 'Update'}
             </button>

@@ -50,3 +50,36 @@ Key Differentiators
    Combined timeline + tree + storage in one platform
    Social feed showing community activity
    Accessible, intuitive design for all ages
+
+   Core Purpose & Problem
+
+- Lore aims to make family/community archiving and scrapbooking the easiest it can possibly be. 
+- Anyone who desires to preserve their own history or community history is a target
+- Our app would be more desirable as a platform, for having multiple features grouped into one application and provide an aspect of networking with other members
+
+Experience / Functionality
+
+- Main tasks are to provide convenient and easy ways to archive/document/share history, share and store images/videos of communities, and connect with other members within
+- users can check in daily to see what other members in communities are doing, as well as update their personal timelines/family trees as well as utilize the cloud storage to back up memories
+- must have features are a visual family tree and timeline for groups, personal profiles for individuals, cloud storage, integration with other media platforms (like how discord can link other accounts)
+- computer app, website, and mobile apps
+
+Content & Data
+
+- graphics e.g. family tree, interactive timeline displaying photos/videos/music tied to specific time periods of life, written letters, memoirs, recipes, family stories
+- a family tree/timeline can be viewed by anyone if made public, every and any form of interaction will require an account. A paid account will access upgraded cloud space and increased slots in a family tree
+- internet connectivity is needed, however can cache for offline viewing
+
+Inspo / style
+
+- ancestry.com is similar, but is only limited to genetic family trees. Lore is different in that it can be used for any type of commu city e.g. churches, sports teams, schools, etc.
+- the tone can be tailored to each user's pref, but devs will keep it playful like Discord
+- design should be intuitive and plain for the sake of accessabiliyy
+
+Lore will include an AI personal assistant
+
+'Hello Felix, welcome back. You updated that your cousin had a new child 5 months ago. Would you like to upload new memories?'
+
+'Hello Andrew, welcome back. You havent updated your profile in a few weeks, make sure to upload a new selfie in case u got a new hairstyle!'
+
+'Hello Anthony, I scanned your family tree photo database and found potential facial matches. Would u like to confirm your identity and add these photos to your tagged images?'

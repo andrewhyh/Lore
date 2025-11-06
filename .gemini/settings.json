@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+        "supabase": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@supabase/mcp-server-supabase@latest"
+                // Uncomment to enable read-only mode
+                // "--read-only"
+            ],
+            "env": {
+                "SUPABASE_URL": "https://supabasekong.comfykid.store",
+                "SUPABASE_ACCESS_TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzdXBhYmFzZSIsImlhdCI6MTc2MjA2MTIyMCwiZXhwIjo0OTE3NzM0ODIwLCJyb2xlIjoiYW5vbiJ9.ebGPfIVLipdg1uPmZt-0fWI6o8iMSPw2_Wd5zNpVIcc"
+            }
+        }
+    }
+}
